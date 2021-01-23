@@ -1,12 +1,20 @@
 import React from "react";
-import styled from "styled-components";
-
+import Navbar from "./components/Navbar";
+import { Wrapper, Nav, Main } from "./styled";
+import { Route } from "react-router-dom";
+import Home from "./components/Home";
+import StudentsInfo from "./components/StudentsInfo";
 const App = () => {
   return (
-    <div className="App">
-      <div>Navbar</div>
-      <div>Main</div>
-    </div>
+    <Wrapper className="App">
+      <Nav>
+        <Navbar />
+      </Nav>
+      <Main>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/students" component={StudentsInfo} />
+      </Main>
+    </Wrapper>
   );
 };
 
