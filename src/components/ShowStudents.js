@@ -28,7 +28,7 @@ const ShowStudents = () => {
       </div>
       <List>
         {uniqStudents.length === 0 ? (
-          "No Data Found"
+          <p className="Error__msg">No Data Found</p>
         ) : (
           <div>
             {uniqStudents.map((ele, i) => {
