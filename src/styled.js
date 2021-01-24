@@ -33,3 +33,48 @@ export const StyledLink = styled(Link)`
     color: black;
   }
 `;
+export const Button = styled.button`
+  border: 0;
+  outline: none;
+  background: linear-gradient(to right bottom, #36d1dc, #5b86e5);
+  color: white;
+  border-radius: 0.25rem;
+  font-family: -system-ui, sans-serif;
+  font-size: 1.5rem;
+  line-height: 1.2;
+  white-space: nowrap;
+  text-decoration: none;
+  padding: 0.25rem 2.5rem;
+  margin: 0.25rem;
+  margin-right: 1rem;
+  width: 200px;
+  cursor: pointer;
+  &:hover {
+    color: black;
+    background: orange;
+  }
+`;
+export const Container = styled.div`
+  display: grid;
+  grid-template: 0.1fr 1fr/1fr;
+`;
+export const Header = styled.div`
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+`;
+
+export const StudentContainer = styled.div`
+  display: grid;
+  grid-template: 0.2fr 1fr/1fr 0.5fr;
+  margin: 5px;
+`;
+export const List = styled.div`
+  width: 500px;
+  height: 400px;
+  border: 1px solid;
+  margin: 0.4rem 5em;
+  padding: 1rem 1em;
+  background: white;
+  overflow-y: auto;
+`;

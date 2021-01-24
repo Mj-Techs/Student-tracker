@@ -1,10 +1,14 @@
-import React, { useState } from "react";
-import { useSelector, useDispatch } from "react-redux";
+import React, { useState, useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { dataExtract } from "../CalcFunction/dataExtraction";
+import { getStudent, getUniqStudents } from "../actions/studentAction";
+import ShowStudents from "./ShowStudents";
+import { Button, Container, Header } from "../styled";
+
 const StudentsInfo = () => {
   const [file, setFile] = useState("");
-  const [chatData, setChatData] = useState([]);
-  console.log(typeof chatData);
-  const students = useSelector((state) => state.students);
+  const dispatch = useDispatch();
+
   const handleFile = (e) => {
     const file = e.target.files[0];
     setFile(file);
@@ -14,27 +18,25 @@ const StudentsInfo = () => {
     const fileReader = new FileReader();
     fileReader.readAsText(file);
     fileReader.onload = (e) => {
-      const data = e.target.result.split("\n");
-      setChatData(data);
+      const data = dataExtract(e.target.result);
+      dispatch(getStudent(data));
+      dispatch(getUniqStudents(data));
     };
   };
   return (
-    <div>
+    <Container>
+      <Header>
+        <div>
+          <form onSubmit={handleSubmit}>
+            <input type="file" onChange={handleFile} />
+            <Button type="submit">save</Button>
+          </form>
+        </div>
+      </Header>
       <div>
-        <form onSubmit={handleSubmit}>
-          <input type="file" onChange={handleFile} />
-          <button type="submit">save</button>
-        </form>
+        <ShowStudents />
       </div>
-      <h1>Students details-{chatData.length}</h1>
-      {chatData.length !== 0 && (
-        <ul>
-          {chatData.map((ele) => (
-            <li>{ele}</li>
-          ))}
-        </ul>
-      )}
-    </div>
+    </Container>
   );
 };
 
