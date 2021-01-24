@@ -14,7 +14,7 @@ const MessageGraph = () => {
   return (
     <div className="graph">
       {students.length === 0 ? (
-        "No Data Found"
+        "Upload your Data File"
       ) : (
         <Chart
           width={"550px"}
