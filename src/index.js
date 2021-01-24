@@ -7,8 +7,9 @@ import App from "./App";
 import { configureStore } from "./store/ConfigureStore";
 
 const store = configureStore();
-console.log(store.getState());
-
+store.subscribe(() => {
+  console.log(store.getState());
+});
 ReactDOM.render(
   <Provider store={store}>
     <Router>
