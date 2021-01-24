@@ -22,10 +22,11 @@ export const LinkWrapper = styled.div`
 export const StyledLink = styled(Link)`
   outline: none;
   text-decoration: none;
-  text-transform: uppercase;
+  text-transform: capitalize;
+  letter-spacing: 2px;
   font-size: 1.5rem;
   display: inline-block;
-  margin-right: 1.625%;
+  margin-right: 2.625%;
   text-align: center;
   color: white;
 

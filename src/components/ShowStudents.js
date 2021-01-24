@@ -28,7 +28,7 @@ const ShowStudents = () => {
       </div>
       <List>
         {uniqStudents.length === 0 ? (
-          "Select Your data file"
+          "No Data Found"
         ) : (
           <div>
             {uniqStudents.map((ele, i) => {
