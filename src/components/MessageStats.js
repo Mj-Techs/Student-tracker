@@ -8,7 +8,8 @@ const MessageStats = (props) => {
   return (
     <div className="messageStats">
       <div className="student__name">
-        All Messages of <span>{props.match.params.name}</span>
+        All <span>{matchedStudent.length}</span> Messages of{" "}
+        <span>{props.match.params.name}</span>
       </div>
 
       <div className="table__container">

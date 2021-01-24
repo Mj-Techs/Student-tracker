@@ -27,15 +27,21 @@ const ShowStudents = () => {
         />
       </div>
       <List>
-        {uniqStudents.map((ele, i) => {
-          return (
-            <div className="list" key={i}>
-              <Link className="link" to={`/message/${ele}`}>
-                {ele}
-              </Link>
-            </div>
-          );
-        })}
+        {uniqStudents.length === 0 ? (
+          "Select Your data file"
+        ) : (
+          <div>
+            {uniqStudents.map((ele, i) => {
+              return (
+                <div className="list" key={i}>
+                  <Link className="link" to={`/message/${ele}`}>
+                    {ele}
+                  </Link>
+                </div>
+              );
+            })}
+          </div>
+        )}
       </List>
       <div>
         <MessageGraph />
