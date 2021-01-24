@@ -29,7 +29,7 @@ const StudentsInfo = () => {
         <div>
           <form onSubmit={handleSubmit}>
             <input type="file" onChange={handleFile} />
-            <Button type="submit">save</Button>
+            <Button type="submit">upload</Button>
           </form>
         </div>
       </Header>

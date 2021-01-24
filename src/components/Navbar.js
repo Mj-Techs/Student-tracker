@@ -3,8 +3,11 @@ import { LinkWrapper, StyledLink } from "../styled";
 const Navbar = () => {
   return (
     <LinkWrapper>
-      <StyledLink to="/">Home</StyledLink>
-      <StyledLink to="/students">StudentsInfo</StyledLink>
+      <div className="logo__header">Dct eye</div>
+      <div className="link__wrapper">
+        <StyledLink to="/">Home</StyledLink>
+        <StyledLink to="/students">Students</StyledLink>
+      </div>
     </LinkWrapper>
   );
 };

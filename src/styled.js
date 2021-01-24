@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 export const Wrapper = styled.div`
   min-height: 100vh;
   min-width: 100vw;
-  background: linear-gradient(to right top, #667db6, #0082c8, #0082c8, #667db6);
+  /* background: linear-gradient(to right top, #c9d6ff, #e2e2e2); */
+  background: #daa520;
   display: grid;
   grid-template: 0.1fr 1fr/1fr;
 `;
@@ -12,11 +13,12 @@ export const Nav = styled.div`
 `;
 export const Main = styled.div`
   border: 1px solid;
+  background: #fff;
 `;
 
 export const LinkWrapper = styled.div`
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   margin-top: 10px;
 `;
 export const StyledLink = styled(Link)`
@@ -24,21 +26,22 @@ export const StyledLink = styled(Link)`
   text-decoration: none;
   text-transform: capitalize;
   letter-spacing: 2px;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   display: inline-block;
   margin-right: 2.625%;
+  padding-right: 10px;
   text-align: center;
-  color: white;
-
+  color: black;
+  font-weight: 700;
   &:hover {
-    color: black;
+    color: white;
   }
 `;
 export const Button = styled.button`
   border: 0;
   outline: none;
-  background: linear-gradient(to right bottom, #36d1dc, #5b86e5);
-  color: white;
+  background: orange;
+  color: black;
   border-radius: 0.25rem;
   font-family: -system-ui, sans-serif;
   font-size: 1.5rem;
@@ -48,10 +51,11 @@ export const Button = styled.button`
   padding: 0.25rem 2.5rem;
   margin: 0.25rem;
   margin-right: 1rem;
-  width: 200px;
+  width: 150px;
+  font-weight: 600;
   cursor: pointer;
   &:hover {
-    color: black;
+    color: white;
     background: orange;
   }
 `;
